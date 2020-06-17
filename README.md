@@ -1,1 +1,33 @@
-{"descriptivo":"Administrador de Flow","producto":"Video","_link_smp":"https://webgestionmoviltesting/Consultas_Modem_HDM.aspx?signed=true\u0026legajo=wdi585714","campo4":"Campo4A"},{"descriptivo":"Administrador de Flow App","producto":"Video","_link_smp":"https://webgestionmoviltesting/Consultas_Modem_HDM.aspx?signed=true\u0026legajo=wdi585714","campo4":"Campo4B"},{"descriptivo":"Administrador de Firmware","producto":"Internet","_link_smp":"https://webgestionmoviltesting/consulta_WF.aspx?signed=true\u0026legajo=wdi585714\u0026wf=HC-CPEWifiOptimize","campo4":"Campo4C"},{"descriptivo":"Reinicio","producto":"Internet","_link_smp":"https://webgestionmoviltesting/consulta_WF.aspx?signed=true\u0026legajo=wdi585714\u0026wf=HC-CPEWifiOptimizD","campo4":"Campo4D"},{"descriptivo":"Reinicio a Valores de Fabrica","producto":"Internet","_link_smp":"https://webgestionmoviltesting/consulta_WF.aspx?signed=true\u0026legajo=wdi585714\u0026wf=HC-CPEWifiOptimize","campo4":"Campo4E"},{"descriptivo":"Test de Velocidad","producto":"Internet","_link_smp":"https://portaldiagnosticouat.telecom.com.ar/SpeedTest.html"}
+{
+	{
+		"descriptivo": "Administrador de Flow",
+		"producto": "Video",
+		"_link_smp": "https://webgestionmoviltesting/Consultas_Modem_HDM.aspx?signed=true&legajo=wdi585714"
+	},
+	{
+		"descriptivo": "Administrador de Flow App",
+		"producto": "Video",
+		"_link_smp": "https://webgestionmoviltesting/Consultas_Modem_HDM.aspx?signed=true&legajo=wdi585714"
+	},
+	{
+		"descriptivo": "Administrador de Firmware",
+		"producto": "Internet",
+		"_link_smp": "https://webgestionmoviltesting/consulta_WF.aspx?signed=true&legajo=wdi585714&wf=HC-CPEWifiOptimize"
+	},
+	{
+		"descriptivo": "Reinicio",
+		"producto": "Internet",
+		"_link_smp": "https://webgestionmoviltesting/consulta_WF.aspx?signed=true&legajo=wdi585714&wf=HC-CPEWifiOptimizD"
+	},
+	{
+		"descriptivo": "Reinicio a Valores de Fabrica",
+		"producto": "Internet",
+		"_link_smp": "https://webgestionmoviltesting/consulta_WF.aspx?signed=true&legajo=wdi585714&wf=HC-CPEWifiOptimize"
+	},
+	{
+		"descriptivo": "Test de Velocidad",
+		"producto": "Internet",
+		"_link_smp": "https://portaldiagnosticouat.telecom.com.ar/SpeedTest.html"
+	}
+}
+

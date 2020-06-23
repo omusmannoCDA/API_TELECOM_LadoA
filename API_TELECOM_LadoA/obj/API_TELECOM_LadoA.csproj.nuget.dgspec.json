@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj": {}
+    "C:\\Users\\Omar-Trabajo\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj": {
+    "C:\\Users\\Omar-Trabajo\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj",
+        "projectUniqueName": "C:\\Users\\Omar-Trabajo\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj",
         "projectName": "API_TELECOM_LadoA",
-        "projectPath": "C:\\Users\\user\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\obj\\",
+        "projectPath": "C:\\Users\\Omar-Trabajo\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\API_TELECOM_LadoA.csproj",
+        "packagesPath": "C:\\Users\\Omar-Trabajo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omar-Trabajo\\Documents\\GIT\\API_TELECOM_LadoA\\API_TELECOM_LadoA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omar-Trabajo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.19.70, )"
             },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.1, )"
@@ -73,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,4 +1,4 @@
-﻿using API_TELECOM_LadoA.Constants;
+﻿using Domain.Constants;
 using Oracle.ManagedDataAccess.Client;
 using Oracle.ManagedDataAccess.Types;
 using System;
@@ -165,9 +165,6 @@ namespace API_TELECOM_LadoA.Services
         }
 
 
-
-
-
         /*PKG_CONSULTAS_DIAGNOSTICO
         PROCEDURE PRC_RECUPERA_SALDO_DIAGNOSTICO (
         PI_ID_SOLICITUD_INTERFAZ   IN     VARCHAR2,
@@ -188,6 +185,11 @@ namespace API_TELECOM_LadoA.Services
                     cmd.CommandText = "PKG_CONSULTAS_DIAGNOSTICO.PRC_RECUPERA_SALDO_DIAGNOSTICO";
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    //TEST
+                    DataSet dataS = new DataSet();
+                    DataTable dt = new DataTable();
+                    dataS.Tables.Add(dt);
+
                     // Add parameter ParameterDirection
                     cmd.Parameters.Add("@PI_ID_SOLICITUD_INTERFAZ", OracleDbType.Varchar2).Value = id_interfaz;
                     cmd.Parameters.Add("@PO_CURSOR", OracleDbType.RefCursor);
@@ -204,7 +206,7 @@ namespace API_TELECOM_LadoA.Services
                     cmd.ExecuteNonQuery();
 
                     //Get results
-                    OracleDataReader resul_PO_CURSOR = ((OracleRefCursor)cmd.Parameters["@PO_CURSOR"].Value).GetDataReader();
+                    var resul_PO_CURSOR = ((OracleRefCursor)cmd.Parameters["@PO_CURSOR"].Value).GetDataReader();
                     string resul_PO_COD_ERROR = cmd.Parameters["@PO_COD_ERROR"].Value.ToString();
                     string resul_PO_DESC_TECNICO = cmd.Parameters["@PO_DESC_TECNICO"].Value.ToString();
                     object resul_PO_DESC_USU = cmd.Parameters["@PO_DESC_USU"].Value.ToString();
@@ -212,12 +214,31 @@ namespace API_TELECOM_LadoA.Services
                     string texto = " ";
                     texto = resul_PO_COD_ERROR + " | " + resul_PO_DESC_TECNICO + " | " + resul_PO_DESC_USU + "\n";
 
+
+                    for (int i = 0; i < resul_PO_CURSOR.FieldCount; i++)
+                    {
+                        DataColumn column = new DataColumn(resul_PO_CURSOR.GetName(i));
+                        dt.Columns.Add(column);
+                    }
+
+                    while (resul_PO_CURSOR.Read())
+                    {
+                        DataRow dtRow = dt.NewRow();
+
+                        for (int i = 0; i < resul_PO_CURSOR.FieldCount; i++)
+                            dtRow[i] = resul_PO_CURSOR.GetValue(i);
+                        dt.Rows.Add(dtRow);
+                    }
+                    var DaTATA= dataS;
+
                     // Get output values.
                     string resul_Interfaz = cmd.Parameters["@PI_ID_SOLICITUD_INTERFAZ"].Value.ToString();
                     //return
                     texto += (resul_Interfaz) + "\n";
-                    texto += resul_PO_CURSOR.GetName(0);
-                    texto += resul_PO_CURSOR.GetName(1);
+                    texto += "------------------------------------------------\n";
+                    texto += resul_PO_CURSOR.GetName(0) + "\n";
+                    texto += resul_PO_CURSOR.GetName(1) + "\n";
+                    texto += "------------------------------------------------\n";
                     resul_PO_CURSOR.Close();
                     resul_PO_CURSOR.Dispose();
                     return texto;
